@@ -5,6 +5,6 @@ import org.testng.annotations.Test;
 public class NewTest {
   @Test
   public void f() {
-	  	System.out.println("this is a test");
+	  	System.out.println("this is a test for github");
   }
 }
