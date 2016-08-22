@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+	<project name="SeleniumTest" default="run" basedir="E:/Selecnium-Test/SeleniumTest">  
+	<property name="src" value="${basedir}/src/testNG_Baidu"/>  
+	<property name="classes" value="${basedir}/bin"/>
+	<!-- <property name="hello_jar" value="hello1.jar"/>   -->
+	
+		
+		<target name="init">  
+		   <mkdir dir="${classes}"/>  
+		</target>  
+		
+		 
+		
+		<target name="compile" depends="init">  
+		   <javac srcdir="${src}" destdir="${classes}"  includeantruntime="on"/>  
+		</target>  
+		
+		
+		
+		<!--  
+		<target name="build" depends="compile">  
+		   <jar jarfile="${hello_jar}" basedir="${For_Testing}"/>  
+		</target>  
+		-->
+		
+		
+		<target name="run" depends="compile">  
+		   <java classname="helloWorld.HelloWorld" classpath="${classes}"/>  
+		</target>  
+		
+		<!-- 
+		<target name="clean">  
+		   <delete dir="${For_Testing}" />  
+		   <delete file="${hello_jar}" />  
+		</target>  
+		 
+		<target name="rerun">  
+		   <ant target="clean" />  
+		   <ant target="run" /> 
+		 </target>
+		 -->
+</project>  
