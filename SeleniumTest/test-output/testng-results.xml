@@ -1,76 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41" started-at="2016-08-19T10:01:50Z" finished-at="2016-08-19T10:01:50Z">
+  <suite name="Default suite" duration-ms="19" started-at="2016-08-22T02:26:54Z" finished-at="2016-08-22T02:26:54Z">
     <groups>
-      <group name="group3">
-        <method signature="TestNG_Basic.paraTest(java.lang.String)[pri:0, instance:testNG_Baidu.TestNG_Basic@1e03fce]" name="paraTest" class="testNG_Baidu.TestNG_Basic"/>
-      </group> <!-- group3 -->
-      <group name="group2">
-        <method signature="TestNG_Basic.c(int, java.lang.String)[pri:0, instance:testNG_Baidu.TestNG_Basic@1e03fce]" name="c" class="testNG_Baidu.TestNG_Basic"/>
-      </group> <!-- group2 -->
     </groups>
-    <test name="test1" duration-ms="26" started-at="2016-08-19T10:01:50Z" finished-at="2016-08-19T10:01:50Z">
-      <class name="testNG_Baidu.NewTest2">
-        <test-method status="PASS" signature="f()[pri:0, instance:testNG_Baidu.NewTest2@161eccb]" name="f" duration-ms="6" started-at="2016-08-19T18:01:50Z" finished-at="2016-08-19T18:01:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- testNG_Baidu.NewTest2 -->
-      <class name="testNG_Baidu.TestNG_Basic">
-        <test-method status="PASS" signature="c(int, java.lang.String)[pri:0, instance:testNG_Baidu.TestNG_Basic@1e03fce]" name="c" duration-ms="5" started-at="2016-08-19T18:01:50Z" data-provider="user" finished-at="2016-08-19T18:01:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[a]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- c -->
-        <test-method status="PASS" signature="c(int, java.lang.String)[pri:0, instance:testNG_Baidu.TestNG_Basic@1e03fce]" name="c" duration-ms="1" started-at="2016-08-19T18:01:50Z" data-provider="user" finished-at="2016-08-19T18:01:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[b]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- c -->
-        <test-method status="PASS" signature="paraTest(java.lang.String)[pri:0, instance:testNG_Baidu.TestNG_Basic@1e03fce]" name="paraTest" duration-ms="1" started-at="2016-08-19T18:01:50Z" finished-at="2016-08-19T18:01:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[parameter test]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- paraTest -->
-      </class> <!-- testNG_Baidu.TestNG_Basic -->
-    </test> <!-- test1 -->
-    <test name="test2" duration-ms="4" started-at="2016-08-19T10:01:50Z" finished-at="2016-08-19T10:01:50Z">
+    <test name="Default test" duration-ms="19" started-at="2016-08-22T02:26:54Z" finished-at="2016-08-22T02:26:54Z">
       <class name="testNG_Baidu.NewTest1">
-        <test-method status="PASS" signature="f()[pri:0, instance:testNG_Baidu.NewTest1@1b1ebe5]" name="f" duration-ms="1" started-at="2016-08-19T18:01:50Z" finished-at="2016-08-19T18:01:50Z">
+        <test-method status="PASS" signature="f()[pri:0, instance:testNG_Baidu.NewTest1@a9c165]" name="f" duration-ms="8" started-at="2016-08-22T10:26:54Z" finished-at="2016-08-22T10:26:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
       </class> <!-- testNG_Baidu.NewTest1 -->
-    </test> <!-- test2 -->
+    </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -11,6 +11,6 @@ import org.testng.annotations.Parameters;
 public class NewTest1 {
   @Test
   public void f() {
-	  System.out.println("case1");
+	  System.out.println("case1 for github");
   }
 }
