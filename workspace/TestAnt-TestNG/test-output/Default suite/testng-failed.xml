@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="classes">
+  <parameter name="url" value="https://www.baidu.com"/>
+  <test name="test1(failed)" parallel="classes">
+    <parameter name="url" value="https://www.baidu.com"/>
+    <groups>
+      <run>
+        <include name="group1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testAntTestNG.BaiduAntTestNG">
+        <methods>
+          <include name="f"/>
+        </methods>
+      </class> <!-- testAntTestNG.BaiduAntTestNG -->
+    </classes>
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
