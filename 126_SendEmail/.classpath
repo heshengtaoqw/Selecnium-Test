@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/apache-mime4j-0.6.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/httpclient-4.5.1.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/httpcore-4.4.3.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/httpmime-4.5.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/jcommander-1.48.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/netty-3.5.7.Final.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/phantomjsdriver-1.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/selenium-java-2.53.1.jar"/>
+	<classpathentry kind="lib" path="D:/SVN/126_SendEmail/lib/testng-6.9.9.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
