@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Default suite" parallel="classes">
+
+  <test verbose="2" name="test1" preserve-order="true">
+   <parameter name = "url" value = "https://www.taobao.com" />
+   <parameter name = "username" value = "740578857@qq.com" />
+   <parameter name = "password" value = "taobao740578857" />
+   <parameter name = "searchText" value = "JAVA" />
+   <parameter name = "min" value = "30" />
+   <parameter name = "max" value = "70" />
+   <parameter name = "city" value = "广州" />
+   <parameter name = "s" value = "数据结构与算法分析：Java语言描述(原书第3版)" />
+ 
+   
+   <!--
+    <groups>
+	        <run>
+	            <include name = "group1"/> 
+	        </run>
+    </groups>
+    -->
+   	<classes>
+   	    
+		<class name="taobao_tfs.TaobaoCart"/>
+			<methods>
+			<include name = "homePage" />
+			<include name = "search" />
+			<include name = "filter" />
+			<include name = "chooseItem" />
+			<include name = "newWindows" />
+			<include name = "login" />
+			</methods>
+		<!--  
+   	   <class name="testNG_Baidu.TestNG_Basic"/>
+		<methods>
+			<include name = "f" />
+			<include name = "g" />
+			<include name = "c" />
+			<include name = "paraTest"/>
+		</methods>
+		-->
+    </classes>
+    
+  </test>  
+  
+  <!--
+   <test verbose="2" name="test2">
+    <classes>
+      <class name="testNG_Baidu.NewTest1"/>
+    </classes>
+  </test> 
+  Default test -->
+  
+</suite> <!-- Default suite -->
+
