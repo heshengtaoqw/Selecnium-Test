@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="1" total="12" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="91278" started-at="2016-08-31T10:19:48Z" finished-at="2016-08-31T10:21:19Z">
+  <suite name="Default suite" duration-ms="184527" started-at="2016-09-07T05:04:22Z" finished-at="2016-09-07T05:07:26Z">
     <groups>
     </groups>
-    <test name="test1" duration-ms="91278" started-at="2016-08-31T10:19:48Z" finished-at="2016-08-31T10:21:19Z">
+    <test name="test1" duration-ms="101963" started-at="2016-09-07T05:04:22Z" finished-at="2016-09-07T05:06:04Z">
       <class name="taobao_tfs.TaobaoCart">
-        <test-method status="PASS" signature="homePage(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="homePage" duration-ms="11564" started-at="2016-08-31T18:19:48Z" finished-at="2016-08-31T18:20:00Z">
+        <test-method status="PASS" signature="homePage(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="homePage" duration-ms="15812" started-at="2016-09-07T13:04:22Z" finished-at="2016-09-07T13:04:38Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homePage -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="beforeMethod" is-config="true" duration-ms="5002" started-at="2016-08-31T18:20:00Z" finished-at="2016-08-31T18:20:05Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:04:38Z" finished-at="2016-09-07T13:04:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="search(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="search" duration-ms="8330" started-at="2016-08-31T18:20:05Z" depends-on-methods="taobao_tfs.TaobaoCart.homePage" finished-at="2016-08-31T18:20:13Z">
+        <test-method status="PASS" signature="search(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="search" duration-ms="9123" started-at="2016-09-07T13:04:43Z" depends-on-methods="taobao_tfs.TaobaoCart.homePage" finished-at="2016-09-07T13:04:52Z">
           <params>
             <param index="0">
               <value>
@@ -33,11 +33,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- search -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-08-31T18:20:13Z" finished-at="2016-08-31T18:20:18Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:04:52Z" finished-at="2016-09-07T13:04:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="filter(int, int)[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="filter" duration-ms="13601" started-at="2016-08-31T18:20:18Z" depends-on-methods="taobao_tfs.TaobaoCart.search" finished-at="2016-08-31T18:20:32Z">
+        <test-method status="PASS" signature="filter(int, int, int)[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="filter" duration-ms="13140" started-at="2016-09-07T13:04:57Z" depends-on-methods="taobao_tfs.TaobaoCart.search" finished-at="2016-09-07T13:05:10Z">
           <params>
             <param index="0">
               <value>
@@ -49,15 +49,20 @@
                 <![CDATA[70]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- filter -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="beforeMethod" is-config="true" duration-ms="5001" started-at="2016-08-31T18:20:32Z" finished-at="2016-08-31T18:20:37Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:05:10Z" finished-at="2016-09-07T13:05:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="chooseItem(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="chooseItem" duration-ms="809" started-at="2016-08-31T18:20:37Z" depends-on-methods="taobao_tfs.TaobaoCart.filter" finished-at="2016-08-31T18:20:38Z">
+        <test-method status="PASS" signature="chooseItem(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="chooseItem" duration-ms="872" started-at="2016-09-07T13:05:15Z" depends-on-methods="taobao_tfs.TaobaoCart.filter" finished-at="2016-09-07T13:05:16Z">
           <params>
             <param index="0">
               <value>
@@ -68,19 +73,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chooseItem -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="beforeMethod" is-config="true" duration-ms="5001" started-at="2016-08-31T18:20:38Z" finished-at="2016-08-31T18:20:43Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:05:16Z" finished-at="2016-09-07T13:05:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="newWindows()[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="newWindows" duration-ms="5391" started-at="2016-08-31T18:20:43Z" depends-on-methods="taobao_tfs.TaobaoCart.chooseItem" finished-at="2016-08-31T18:20:48Z">
+        <test-method status="PASS" signature="newWindows()[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="newWindows" duration-ms="9298" started-at="2016-09-07T13:05:21Z" depends-on-methods="taobao_tfs.TaobaoCart.chooseItem" finished-at="2016-09-07T13:05:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newWindows -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="beforeMethod" is-config="true" duration-ms="5001" started-at="2016-08-31T18:20:48Z" finished-at="2016-08-31T18:20:53Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:05:30Z" finished-at="2016-09-07T13:05:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="login" duration-ms="20775" started-at="2016-08-31T18:20:53Z" depends-on-methods="taobao_tfs.TaobaoCart.newWindows" finished-at="2016-08-31T18:21:14Z">
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="login" duration-ms="23126" started-at="2016-09-07T13:05:35Z" depends-on-methods="taobao_tfs.TaobaoCart.newWindows" finished-at="2016-09-07T13:05:58Z">
           <params>
             <param index="0">
               <value>
@@ -96,15 +101,174 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="beforeMethod" is-config="true" duration-ms="5001" started-at="2016-08-31T18:21:14Z" finished-at="2016-08-31T18:21:19Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:05:58Z" finished-at="2016-09-07T13:06:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:taobao_tfs.TaobaoCart@16bcf8a]" name="afterClass" is-config="true" duration-ms="773" started-at="2016-08-31T18:21:19Z" finished-at="2016-08-31T18:21:19Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:taobao_tfs.TaobaoCart@1e097bc]" name="afterClass" is-config="true" duration-ms="564" started-at="2016-09-07T13:06:03Z" finished-at="2016-09-07T13:06:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- taobao_tfs.TaobaoCart -->
     </test> <!-- test1 -->
+    <test name="test2" duration-ms="82553" started-at="2016-09-07T05:06:04Z" finished-at="2016-09-07T05:07:26Z">
+      <class name="taobao_tfs.TaobaoCart">
+        <test-method status="PASS" signature="homePage(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="homePage" duration-ms="17524" started-at="2016-09-07T13:06:04Z" finished-at="2016-09-07T13:06:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.taobao.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePage -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:06:21Z" finished-at="2016-09-07T13:06:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="search(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="search" duration-ms="8680" started-at="2016-09-07T13:06:26Z" depends-on-methods="taobao_tfs.TaobaoCart.homePage" finished-at="2016-09-07T13:06:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[JAVA]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:06:35Z" finished-at="2016-09-07T13:06:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="filter(int, int, int)[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="filter" duration-ms="12566" started-at="2016-09-07T13:06:40Z" depends-on-methods="taobao_tfs.TaobaoCart.search" finished-at="2016-09-07T13:06:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[70]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filter -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="beforeMethod" is-config="true" duration-ms="5001" started-at="2016-09-07T13:06:53Z" finished-at="2016-09-07T13:06:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="chooseItem(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="chooseItem" duration-ms="752" started-at="2016-09-07T13:06:58Z" depends-on-methods="taobao_tfs.TaobaoCart.filter" finished-at="2016-09-07T13:06:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Java从入门到精通（第3版）（配光盘）（软件开发视频大讲堂）]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseItem -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:06:58Z" finished-at="2016-09-07T13:07:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="newWindows()[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="newWindows" duration-ms="2413" started-at="2016-09-07T13:07:03Z" depends-on-methods="taobao_tfs.TaobaoCart.chooseItem" finished-at="2016-09-07T13:07:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newWindows -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:07:06Z" finished-at="2016-09-07T13:07:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="login(java.lang.String, java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="login" duration-ms="10051" started-at="2016-09-07T13:07:11Z" depends-on-methods="taobao_tfs.TaobaoCart.newWindows" finished-at="2016-09-07T13:07:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[740578857@qq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[taobao740578857]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 9 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
+System info: host: 'IT-A7610', ip: '172.16.6.6', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
+Session ID: 04ef2051-a0f6-4bfd-ac4b-d577b8891ffd
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=44.0.2}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 9 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
+System info: host: 'IT-A7610', ip: '172.16.6.6', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
+Session ID: 04ef2051-a0f6-4bfd-ac4b-d577b8891ffd
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=44.0.2}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+	at taobao_tfs.TaobaoCart.login(TaobaoCart.java:143)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:32:46'
+System info: host: 'IT-A7610', ip: '172.16.6.6', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0_71'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/A7610/AppData/Local/Temp/anonymous194888488207218802webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:10092)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/A7610/AppData/Local/Temp/anonymous194888488207218802webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12644)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/A7610/AppData/Local/Temp/anonymous194888488207218802webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/A7610/AppData/Local/Temp/anonymous194888488207218802webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/A7610/AppData/Local/Temp/anonymous194888488207218802webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-07T13:07:21Z" finished-at="2016-09-07T13:07:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:taobao_tfs.TaobaoCart@bf6d1e]" name="afterClass" is-config="true" duration-ms="550" started-at="2016-09-07T13:07:26Z" finished-at="2016-09-07T13:07:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- taobao_tfs.TaobaoCart -->
+    </test> <!-- test2 -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -4,33 +4,35 @@
   <parameter name="min" value="30"/>
   <parameter name="username" value="740578857@qq.com"/>
   <parameter name="max" value="70"/>
-  <parameter name="s" value="数据结构与算法分析：Java语言描述(原书第3版)"/>
+  <parameter name="s" value="Java从入门到精通（第3版）（配光盘）（软件开发视频大讲堂）"/>
   <parameter name="searchText" value="JAVA"/>
+  <parameter name="testCase" value="2"/>
   <parameter name="password" value="taobao740578857"/>
   <parameter name="url" value="https://www.taobao.com"/>
-  <parameter name="city" value="广州"/>
-  <test name="test1(failed)" parallel="classes">
+  <test name="test2(failed)" parallel="classes">
     <parameter name="min" value="30"/>
     <parameter name="username" value="740578857@qq.com"/>
     <parameter name="max" value="70"/>
-    <parameter name="s" value="数据结构与算法分析：Java语言描述(原书第3版)"/>
+    <parameter name="s" value="Java从入门到精通（第3版）（配光盘）（软件开发视频大讲堂）"/>
     <parameter name="searchText" value="JAVA"/>
+    <parameter name="testCase" value="2"/>
     <parameter name="password" value="taobao740578857"/>
     <parameter name="url" value="https://www.taobao.com"/>
-    <parameter name="city" value="广州"/>
     <classes>
       <class name="taobao_tfs.TaobaoCart">
         <methods>
           <include name="newWindows"/>
           <include name="homePage"/>
           <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
           <include name="login" invocation-numbers="0"/>
           <include name="chooseItem"/>
+          <include name="afterClass"/>
           <include name="afterClass"/>
           <include name="filter"/>
           <include name="search"/>
         </methods>
       </class> <!-- taobao_tfs.TaobaoCart -->
     </classes>
-  </test> <!-- test1(failed) -->
+  </test> <!-- test2(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

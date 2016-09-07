@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="87573" started-at="2016-09-01T06:07:36Z" finished-at="2016-09-01T06:09:03Z">
+    <groups>
+    </groups>
+    <test name="test1" duration-ms="87573" started-at="2016-09-01T06:07:36Z" finished-at="2016-09-01T06:09:03Z">
+      <class name="taobao_tfs.TaobaoCart">
+        <test-method status="PASS" signature="homePage(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="homePage" duration-ms="8698" started-at="2016-09-01T14:07:36Z" finished-at="2016-09-01T14:07:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.taobao.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePage -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="beforeMethod" is-config="true" duration-ms="5001" started-at="2016-09-01T14:07:45Z" finished-at="2016-09-01T14:07:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="search(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="search" duration-ms="9480" started-at="2016-09-01T14:07:50Z" depends-on-methods="taobao_tfs.TaobaoCart.homePage" finished-at="2016-09-01T14:07:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[JAVA]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="beforeMethod" is-config="true" duration-ms="5001" started-at="2016-09-01T14:07:59Z" finished-at="2016-09-01T14:08:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="filter(int, int)[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="filter" duration-ms="12560" started-at="2016-09-01T14:08:04Z" depends-on-methods="taobao_tfs.TaobaoCart.search" finished-at="2016-09-01T14:08:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[70]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filter -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="beforeMethod" is-config="true" duration-ms="5001" started-at="2016-09-01T14:08:17Z" finished-at="2016-09-01T14:08:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="chooseItem(java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="chooseItem" duration-ms="818" started-at="2016-09-01T14:08:22Z" depends-on-methods="taobao_tfs.TaobaoCart.filter" finished-at="2016-09-01T14:08:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[数据结构与算法分析：Java语言描述(原书第3版)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseItem -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-01T14:08:22Z" finished-at="2016-09-01T14:08:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="newWindows()[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="newWindows" duration-ms="4675" started-at="2016-09-01T14:08:27Z" depends-on-methods="taobao_tfs.TaobaoCart.chooseItem" finished-at="2016-09-01T14:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newWindows -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="beforeMethod" is-config="true" duration-ms="5000" started-at="2016-09-01T14:08:32Z" finished-at="2016-09-01T14:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="login" duration-ms="20768" started-at="2016-09-01T14:08:37Z" depends-on-methods="taobao_tfs.TaobaoCart.newWindows" finished-at="2016-09-01T14:08:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[740578857@qq.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[taobao740578857]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="beforeMethod" is-config="true" duration-ms="5001" started-at="2016-09-01T14:08:58Z" finished-at="2016-09-01T14:09:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:taobao_tfs.TaobaoCart@5890bd]" name="afterClass" is-config="true" duration-ms="555" started-at="2016-09-01T14:09:03Z" finished-at="2016-09-01T14:09:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- taobao_tfs.TaobaoCart -->
+    </test> <!-- test1 -->
+  </suite> <!-- Default suite -->
+</testng-results>

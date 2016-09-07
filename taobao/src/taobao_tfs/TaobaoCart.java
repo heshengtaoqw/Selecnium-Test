@@ -1,37 +1,58 @@
 package taobao_tfs;
 
-import java.awt.List;
+
 
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.*;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 
 public class TaobaoCart {
 	
-	  WebDriver browser = new FirefoxDriver();
+	
+	  DesiredCapabilities dc = new DesiredCapabilities();
+	  
+	  
+	  WebDriver browser = new FirefoxDriver(dc);
 	  
 	  @Parameters({"url"})
 	  @Test
-	  public void homePage(String url) throws Exception
+	  public void homePage(String url) 
 	  {
-		  browser.get(url);
+		  try
+		  {
+			  browser.get(url);
+		  }
+		  catch(org.openqa.selenium.UnhandledAlertException e)
+		  {
+			  e.printStackTrace();		  
+		  }
+		 
 	  }
+	  
 	  
 	  @Parameters({"searchText"})
 	  @Test(dependsOnMethods = "homePage")
-	  public void search(String searchText) throws Exception
+	  public void search(String searchText) 
 	  {
-		  WebElement searchField = browser.findElement(By.id("q"));
-		  searchField.sendKeys(searchText);
-		  WebElement searchButton = browser.findElement(By.xpath("//button[contains(text(),'搜索')]"));
-		  searchButton.click();
+		  try
+		  {
+			  WebElement searchField = browser.findElement(By.id("q"));
+			  searchField.clear();
+			  searchField.sendKeys(searchText);
+			  WebElement searchButton = browser.findElement(By.xpath("//button[contains(text(),'搜索')]"));
+			  searchButton.click();	  
+		  }
+		  catch(org.openqa.selenium.UnhandledAlertException e)
+		  {
+			 browser.switchTo().alert().accept();
+		  }
 	  }
 	  
-	  @Parameters({"min","max"})
+	  @Parameters({"min","max","testCase"})
 	  @Test(dependsOnMethods = "search")
-	  public void filter(int min, int max) throws Exception
+	  public void filter(int min, int max, int testCase) throws Exception
 	  {
 		  WebElement sortBy = browser.findElement(By.linkText("销量"));
 		  sortBy.click();
@@ -45,12 +66,53 @@ public class TaobaoCart {
 		  minPrice.sendKeys(String.valueOf(min));
 		  maxPrice.sendKeys(String.valueOf(max));
 		  Thread.sleep(3000);
-		  
 		  JavascriptExecutor js1 = (JavascriptExecutor) browser;
 	      js1.executeScript("arguments[0].click();", confirmPrice);
+		  
+	      
 	      WebElement shipFrom = browser.findElement(By.xpath("//a[contains(text(),'广州')]"));
-		  JavascriptExecutor js = (JavascriptExecutor) browser;
+	      
+	      if(testCase==1)
+	      {
+	    	  shipFrom = browser.findElement(By.xpath("//a[contains(text(),'广州')]")); 
+	    	  System.out.println("city is guangzhou");
+	      }
+	      else if(testCase==2)
+	      {
+	    	  shipFrom = browser.findElement(By.xpath("//a[contains(text(),'深圳')]")); 
+	    	  System.out.println("city is shenzhen");
+	      }
+	      else
+	      {
+	    	  
+	    	  System.out.println(testCase==2);
+	      }
+	      
+	      JavascriptExecutor js = (JavascriptExecutor) browser;
 	      js.executeScript("arguments[0].click();", shipFrom);
+	      
+	      /*
+	      System.out.println(sss);
+	      WebElement shipFrom = browser.findElement(By.xpath("//a[contains(text(),"+sss+")]")); 
+	      shipFrom.getText();
+	      JavascriptExecutor js = (JavascriptExecutor) browser;
+	      js.executeScript("arguments[0].click();", shipFrom);
+	      */
+	      
+	      /*
+		  Actions action = new Actions(browser);
+		  WebElement nav = browser.findElement(By.xpath("html/body/div[1]/div[2]/div[3]/div[1]/div[16]/div/div[1]/div/div[4]/div[1]/div/span[1]"));
+		  action.moveToElement(nav).build().perform();
+		  browser.findElement(By.linkText("深圳")).click();
+		  */
+	      
+	      
+	      
+	
+		 
+		
+	      
+	      
 	  }
 	  
 	  @Parameters({"s"})

@@ -2,56 +2,52 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="Default suite" parallel="classes">
-
-  <test verbose="2" name="test1" preserve-order="true">
-   <parameter name = "url" value = "https://www.taobao.com" />
-   <parameter name = "username" value = "740578857@qq.com" />
-   <parameter name = "password" value = "taobao740578857" />
-   <parameter name = "searchText" value = "JAVA" />
-   <parameter name = "min" value = "30" />
-   <parameter name = "max" value = "70" />
-   <parameter name = "city" value = "广州" />
-   <parameter name = "s" value = "数据结构与算法分析：Java语言描述(原书第3版)" />
- 
-   
-   <!--
-    <groups>
-	        <run>
-	            <include name = "group1"/> 
-	        </run>
-    </groups>
-    -->
-   	<classes>
-   	    
-		<class name="taobao_tfs.TaobaoCart"/>
-			<methods>
-			<include name = "homePage" />
-			<include name = "search" />
-			<include name = "filter" />
-			<include name = "chooseItem" />
-			<include name = "newWindows" />
-			<include name = "login" />
-			</methods>
-		<!--  
-   	   <class name="testNG_Baidu.TestNG_Basic"/>
-		<methods>
-			<include name = "f" />
-			<include name = "g" />
-			<include name = "c" />
-			<include name = "paraTest"/>
-		</methods>
-		-->
-    </classes>
+   <!--  
+     <groups> 
+			    <run> 
+			      <include name="windows.*"/> 
+			    </run> 
+	 </groups> 
+	-->
+			  
+	 <test verbose="1" name="test1" preserve-order="true">
+	   <parameter name = "url" value = "https://www.taobao.com" />
+	   <parameter name = "searchText" value = "JAVA" />
+	   <parameter name = "username" value = "740578857@qq.com" />
+	   <parameter name = "password" value = "taobao740578857" />
+	   <parameter name = "min" value = "30" />
+	   <parameter name = "max" value = "70" />
+	   <parameter name = "testCase" value = "1" />
+	   <parameter name = "s" value = "数据结构与算法分析：Java语言描述(原书第3版)" />
+	  
+	  	<classes>	    
+			<class name="taobao_tfs.TaobaoCart" preserve-order="true"/>
+			 <method>
+	          	<include name = "homePage" />
+	          	<include name = "search" />
+	      	    <include name = "filter" />
+	      	    <include name = "chooseItem" />
+	      	    <include name = "newWindows" />
+	      	    <include name = "login" />  
+	          </method>
+	    </classes>
+	  </test> 
     
-  </test>  
-  
-  <!--
-   <test verbose="2" name="test2">
-    <classes>
-      <class name="testNG_Baidu.NewTest1"/>
-    </classes>
-  </test> 
-  Default test -->
-  
+   
+	  <test verbose="2" name="test2" preserve-order="true">
+		   <parameter name = "url" value = "https://www.taobao.com" />
+		   <parameter name = "searchText" value = "JAVA" />
+		   <parameter name = "username" value = "740578857@qq.com" />
+		   <parameter name = "password" value = "taobao740578857" />
+		   <parameter name = "min" value = "30" />
+		   <parameter name = "max" value = "70" />
+		   <parameter name = "testCase" value = "2" />
+		   <parameter name = "s" value = "Java从入门到精通（第3版）（配光盘）（软件开发视频大讲堂）" />
+	  
+			  	<classes>	    
+					<class name="taobao_tfs.TaobaoCart" preserve-order="true"/>
+			    </classes>
+	  </test>  
+	    
 </suite> <!-- Default suite -->
 
