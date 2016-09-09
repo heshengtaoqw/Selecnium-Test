@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <parameter name="customerName" value="林华"/>
+  <parameter name="product" value="安易贷"/>
+  <parameter name="applyPurpose" value="偿还债务"/>
+  <parameter name="urgentTpye" value="true"/>
+  <parameter name="account" value="7"/>
+  <parameter name="customerID" value="512501197506045175"/>
+  <parameter name="period" value="48期"/>
+  <parameter name="employee" value="测试肖六:XS006"/>
+  <parameter name="loginPassword" value="a123456"/>
+  <parameter name="loginName" value="XS002"/>
+  <test name="test1(failed)">
+    <parameter name="product" value="安易贷"/>
+    <parameter name="customerName" value="林华"/>
+    <parameter name="applyPurpose" value="偿还债务"/>
+    <parameter name="urgentTpye" value="true"/>
+    <parameter name="account" value="7"/>
+    <parameter name="employee" value="测试肖六:XS006"/>
+    <parameter name="period" value="48期"/>
+    <parameter name="customerID" value="512501197506045175"/>
+    <parameter name="loginPassword" value="a123456"/>
+    <parameter name="loginName" value="XS002"/>
+    <classes>
+      <class name="tfs_package.Register">
+        <methods>
+          <include name="authentication"/>
+          <include name="menu"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="login"/>
+          <include name="registerDetail"/>
+        </methods>
+      </class> <!-- tfs_package.Register -->
+    </classes>
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Default suite" parallel="false" thread-count = "1">
+
+  <test name="test1">
+      <parameter name="loginName" value="XS002"/> 
+      <parameter name="loginPassword" value="a123456"/>
+      <parameter name="customerName" value="林华"/>
+      <parameter name="customerID" value="512501197506045175"/>
+      <parameter name="account" value="7"/>
+      <parameter name="applyPurpose" value="偿还债务"/> <!--list = 经营，采购，教育 ，装修，医疗，旅游，消费，偿还债务-->
+      <parameter name="product" value="安易贷"/> <!--list = 薪易贷，航信贷，网易贷，房易贷，生易贷，安易贷，社保贷，公积金贷，保单贷，信用贷-->
+      <parameter name="period" value="48期"/> <!--list = 6期，12期，24期，36期，48期，60期-->
+      <parameter name="urgentTpye" value="true"/> <!-- true, false-->
+      <parameter name="employee" value="测试肖六:XS006"/> <!-- 测试肖六:XS006 -->
+              
+      <classes>
+		<class name="tfs_package.Register" />
+    </classes>
+  </test>  
+  
+</suite> <!-- Default suite -->
+
