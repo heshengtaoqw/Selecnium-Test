@@ -1,14 +1,10 @@
 package tfs_package;
 
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterClass;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.*;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -22,7 +18,36 @@ import org.testng.annotations.Parameters;
 public class Register {
 	
 	  WebDriver browser = new FirefoxDriver();
-	
+	  
+	  public void jsClick(WebElement element)
+	  {
+		  try
+		  {
+		  if(element.isEnabled() | element.isDisplayed())
+		  {
+			  JavascriptExecutor js = (JavascriptExecutor) browser;
+			  js.executeScript("arguments[0].click()", element);
+		  }
+		  else if(!element.isEnabled() && !element.isDisplayed())
+		  {
+			  System.out.println("The Element is not Displayed and Enabled");
+		  }
+		  else if(element.isEnabled())
+		  {
+			  System.out.println("The Element is not Displayed");
+		  }
+		  else
+		  {
+			  System.out.println("The Element is not isEnabled");
+		  }
+		  
+		  }
+		  catch(Exception e)
+		  {
+			  e.printStackTrace();
+		  }
+	  }
+	  
 	  @Parameters({"loginName","loginPassword"})
 	  @Test
 	  public void login(String loginName, String loginPassword)
@@ -52,8 +77,10 @@ public class Register {
 	  public void menu() 
 	  {
 		  WebElement menuButton = browser.findElement(By.xpath("//span[contains(text(),'借款登记')]"));
-		  JavascriptExecutor js1 = (JavascriptExecutor) browser;
-	      js1.executeScript("arguments[0].click();", menuButton);
+		  jsClick(menuButton);
+		  //JavascriptExecutor js1 = (JavascriptExecutor) browser;
+	      //js1.executeScript("arguments[0].click();", menuButton);
+		  
 		  //Assert.assertEquals(browser.findElement(By.xpath("html/body/div[2]/div/div[2]/div/div/div/div/div[1]/label")).getText(), "借款申请/借款登记");
 		  //Assert.assertFalse(browser.findElement(By.name("business_dept_name")).isEnabled());
 	  }
@@ -98,9 +125,9 @@ public class Register {
 		  //Assert.assertFalse(browser.findElement(By.name("business_dept_name")).isEnabled());
 	  }
 	  
-	  @Parameters({"account","applyPurpose","product","period","urgentTpye","employee"})
+	  @Parameters({"account","applyPurpose","product","period","urgentTpye","employee","urgentReason"})
 	  @Test(dependsOnMethods="authentication")
-	  public void registerDetail(String account, String applyPurpose, String product, String period, Boolean urgentTpye, String employee)
+	  public void registerDetail(String account, String applyPurpose, String product, String period, Boolean urgentTpye, String employee, String urgentReason)
 	  {
 		  WebElement accountField = browser.findElement(By.id("Application_apply_amount"));
 		  Select applyPurposeSelector = new Select(browser.findElement(By.id("Application_apply_purpose")));
@@ -123,25 +150,27 @@ public class Register {
 			  Thread.sleep(5000);
 			  WebElement employField1 = browser.findElement(By.xpath("//a[contains(text(),'测试肖六:XS006')]"));
 			  employField1.click();
-			  Thread.sleep(5000);	  
+			  Thread.sleep(5000);	   
 			  
 			  if(urgentTpye)
 			  {
 				  WebElement urgent = browser.findElement(By.id("urgent1"));
-				  WebElement urgentReason = browser.findElement(By.id("Application_urgent_reason"));
+				  WebElement urgentReasonField = browser.findElement(By.id("Application_urgent_reason"));
 				  urgent.click();
-				  urgentReason.sendKeys("this is a test case from Eclipse");
+				  urgentReasonField.sendKeys(urgentReason);
 			  }
 			  else{}			 
 			  
 			  accountField.click();
 			  Thread.sleep(5000);//为了把下拉不挡住加急原因
 			  File filter = ((TakesScreenshot)browser).getScreenshotAs(OutputType.FILE);
-			  FileUtils.copyFile(filter, new File("D:\\SVNLocal\\tfs\\filter.png")); //打印登记详情的截图  
+			  FileUtils.copyFile(filter, new File("D:\\SVNLocal\\tfs\\screenshot\\register\\filter.png")); //打印登记详情的截图  
 			  registerButton.click();
 			  File result = ((TakesScreenshot)browser).getScreenshotAs(OutputType.FILE);
-			  FileUtils.copyFile(result, new File("D:\\SVNLocal\\tfs\\result.png"));//打印结果的截图
+			  FileUtils.copyFile(result, new File("D:\\SVNLocal\\tfs\\screenshot\\register\\result.png"));//打印结果的截图
 		  }
+		  catch(IOException e)
+		  {e.printStackTrace();}
 		  catch(Exception e)
 		  {e.printStackTrace();}
 	  }

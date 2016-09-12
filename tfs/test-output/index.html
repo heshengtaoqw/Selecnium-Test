@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,22 +101,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tfs_package.Register" hash-for-method="authentication(林华, 512501197506045175)">authentication(林华, 512501197506045175)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tfs_package.ApplicationAssign" hash-for-method="filter">filter</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tfs_package.Register" hash-for-method="login(XS002, a123456)">login(XS002, a123456)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tfs_package.ApplicationAssign" hash-for-method="login(XS001, a123456)">login(XS001, a123456)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tfs_package.Register" hash-for-method="menu">menu</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tfs_package.Register" hash-for-method="registerDetail(7, 偿还债务, 安易贷, 48期, true, 测试肖六:XS006)">registerDetail(7, 偿还债务, 安易贷, 48期, true, 测试肖六:XS006)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tfs_package.ApplicationAssign" hash-for-method="menu">menu</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -134,23 +129,22 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tfs_package.Register</span>
+              <span class="class-name">tfs_package.ApplicationAssign</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="authentication(林华, 512501197506045175)">
-                  </a> <!-- authentication(林华, 512501197506045175) -->
-                  <span class="method-name">authentication</span>
-                  <span class="parameters">(林华, 512501197506045175)</span>
+                  <a name="filter">
+                  </a> <!-- filter -->
+                  <span class="method-name">filter</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="login(XS002, a123456)">
-                  </a> <!-- login(XS002, a123456) -->
+                  <a name="login(XS001, a123456)">
+                  </a> <!-- login(XS001, a123456) -->
                   <span class="method-name">login</span>
-                  <span class="parameters">(XS002, a123456)</span>
+                  <span class="parameters">(XS001, a123456)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -158,14 +152,6 @@
                   <a name="menu">
                   </a> <!-- menu -->
                   <span class="method-name">menu</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="registerDetail(7, 偿还债务, 安易贷, 48期, true, 测试肖六:XS006)">
-                  </a> <!-- registerDetail(7, 偿还债务, 安易贷, 48期, true, 测试肖六:XS006) -->
-                  <span class="method-name">registerDetail</span>
-                  <span class="parameters">(7, 偿还债务, 安易贷, 48期, true, 测试肖六:XS006)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -180,21 +166,13 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;1&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test name=&quot;test1&quot;&gt;
-    &lt;parameter name=&quot;product&quot; value=&quot;安易贷&quot;/&gt;
-    &lt;parameter name=&quot;customerName&quot; value=&quot;林华&quot;/&gt;
-    &lt;parameter name=&quot;applyPurpose&quot; value=&quot;偿还债务&quot;/&gt;
-    &lt;parameter name=&quot;urgentTpye&quot; value=&quot;true&quot;/&gt;
-    &lt;parameter name=&quot;account&quot; value=&quot;7&quot;/&gt;
-    &lt;parameter name=&quot;employee&quot; value=&quot;测试肖六:XS006&quot;/&gt;
-    &lt;parameter name=&quot;period&quot; value=&quot;48期&quot;/&gt;
-    &lt;parameter name=&quot;customerID&quot; value=&quot;512501197506045175&quot;/&gt;
+  &lt;test name=&quot;ApplicationAssign&quot;&gt;
     &lt;parameter name=&quot;loginPassword&quot; value=&quot;a123456&quot;/&gt;
-    &lt;parameter name=&quot;loginName&quot; value=&quot;XS002&quot;/&gt;
+    &lt;parameter name=&quot;loginName&quot; value=&quot;XS001&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tfs_package.Register&quot;/&gt;
+      &lt;class name=&quot;tfs_package.ApplicationAssign&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- test1 --&gt;
+  &lt;/test&gt; &lt;!-- ApplicationAssign --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,7 +184,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">test1 (1 class)</span>
+                <span class="test-name">ApplicationAssign (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,28 +210,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'registerDetail')
-data.setCell(0, 2, 'tfs_package.Register')
-data.setCell(0, 3, 16931);
+data.setCell(0, 1, 'filter')
+data.setCell(0, 2, 'tfs_package.ApplicationAssign')
+data.setCell(0, 3, 15875);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'authentication')
-data.setCell(1, 2, 'tfs_package.Register')
-data.setCell(1, 3, 5653);
+data.setCell(1, 1, 'login')
+data.setCell(1, 2, 'tfs_package.ApplicationAssign')
+data.setCell(1, 3, 4344);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'login')
-data.setCell(2, 2, 'tfs_package.Register')
-data.setCell(2, 3, 4450);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'menu')
-data.setCell(3, 2, 'tfs_package.Register')
-data.setCell(3, 3, 52);
+data.setCell(2, 1, 'menu')
+data.setCell(2, 2, 'tfs_package.ApplicationAssign')
+data.setCell(2, 3, 81);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 20 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -279,42 +253,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tfs_package.Register</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tfs_package.ApplicationAssign</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">login(XS002, a123456)</span>
+                <span class="method-name">login(XS001, a123456)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">4451 ms</span>
+                <span class="method-start">4344 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">menu</span>
-                <span class="method-start">7454 ms</span>
+                <span class="method-start">7347 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">7506 ms</span>
+                <span class="method-start">7428 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">authentication(林华, 512501197506045175)</span>
-                <span class="method-start">10509 ms</span>
+                <span class="method-name">filter</span>
+                <span class="method-start">10428 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">16162 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">registerDetail(7, 偿还债务, 安易贷, 48期, true, 测试肖六:XS006)</span>
-                <span class="method-start">19162 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">36094 ms</span>
+                <span class="method-start">26304 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">39094 ms</span>
+                <span class="method-start">29304 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
