@@ -9,8 +9,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.AfterMethod;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.OutputType;
 
 import tfs_package.Register;
 
@@ -25,10 +23,12 @@ public class ApplicationAssign {
 		  r.login(loginName, loginPassword);
 	  }
 	  
+	  @Parameters({"s"})
 	  @Test(dependsOnMethods="login")
-	  public void menu() 
+	  public void menu(String s) 
 	  {
-		  WebElement menuButton = r.browser.findElement(By.xpath("//span[contains(text(),'借款分配')]"));
+		  
+		  WebElement menuButton = r.browser.findElement(By.xpath("//span[contains(text(),'"+s+"')]"));
 		  r.jsClick(menuButton);
 		  //JavascriptExecutor js1 = (JavascriptExecutor) browser;
 	      //js1.executeScript("arguments[0].click();", menuButton);
@@ -37,28 +37,27 @@ public class ApplicationAssign {
 		  //Assert.assertFalse(browser.findElement(By.name("business_dept_name")).isEnabled());
 	  }
 	  
-	  @Parameters({"loginName","loginPassword"})
+	  @Parameters({"salesmanName","groupLeaderName","customerName","customerID"})
 	  @Test(dependsOnMethods = "menu")
-	  public void filter()
+	  public void filter(String salesmanName, String groupLeaderName, String customerName, String customerID)
 	  {
-		  System.out.println(r.browser.getCurrentUrl());
 		  WebElement custNameField = r.browser.findElement(By.id("cust_name"));
 		  WebElement idCardField = r.browser.findElement(By.id("id_card"));
 		  WebElement salesmanNameField = r.browser.findElement(By.id("salesman_name"));
 		  WebElement groupLeaderNameField = r.browser.findElement(By.id("group_leader_name"));
 		  
-		  custNameField.sendKeys("林华");
-		  idCardField.sendKeys("512501197506045175");
+		  custNameField.sendKeys(customerName);
+		  idCardField.sendKeys(customerID);
 		  
 		  try
 		  {
-			  salesmanNameField.sendKeys("测试肖六:XS006");
-			  Thread.sleep(5000);
-			  r.browser.findElement(By.xpath("//a[contains(text(),'测试肖六:XS006')]")).click();;
+			  salesmanNameField.sendKeys(salesmanName);
+			  Thread.sleep(7000);
+			  r.browser.findElement(By.xpath("//a[contains(text(),'"+salesmanName+"')]")).click();;
 			  
-			  groupLeaderNameField.sendKeys("测试肖二:XS002");
-			  Thread.sleep(5000);
-			  r.browser.findElement(By.xpath("//a[contains(text(),'测试肖二:XS002')]")).click();;
+			  groupLeaderNameField.sendKeys(groupLeaderName);
+			  Thread.sleep(7000);
+			  r.browser.findElement(By.xpath("//a[contains(text(),'"+groupLeaderName+"')]")).click();;
 			  
 			  custNameField.click();
 			  File filter = ((TakesScreenshot)r.browser).getScreenshotAs(OutputType.FILE);
@@ -69,11 +68,35 @@ public class ApplicationAssign {
 			  Thread.sleep(5000);
 			  File result = ((TakesScreenshot)r.browser).getScreenshotAs(OutputType.FILE);
 			  FileUtils.copyFile(result, new File("D:\\SVNLocal\\tfs\\screenshot\\ApplicationAssign\\result.png"));//打印结果的截图
+			  
 		  }
 		  catch(IOException e)
 		  {e.printStackTrace();}
 		  catch(Exception e)
 		  {e.printStackTrace();}
+		  
+	  }
+	  
+	  @Parameters({"serverName"})
+	  @Test(dependsOnMethods = "filter")
+	  public void assign(String serverName)
+	  {
+		  try
+		  {
+			  WebElement assignButton = r.browser.findElement(By.name("lookLog"));
+			  r.jsClick(assignButton);
+			  Thread.sleep(3000); //这里延迟，是因为下面的元素要等待页面加载
+			  WebElement assignTo = r.browser.findElement(By.id("employee_search"));
+			  System.out.println(assignTo.isDisplayed());
+			  assignTo.sendKeys(serverName);  
+			  Thread.sleep(5000);
+			  r.browser.findElement(By.xpath("//a[contains(text(),'"+serverName+"')]")).click();
+			  WebElement assignConfirm = r.browser.findElement(By.xpath("//input[contains(@value,'确认分配')]"));
+			  r.jsClick(assignConfirm);
+			  r.browser.switchTo().alert().accept();
+		  }
+		  
+		  catch(Exception e){e.printStackTrace();}
 		  
 	  }
 	  

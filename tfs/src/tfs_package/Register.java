@@ -73,10 +73,13 @@ public class Register {
 		  }
 	  }
 	  
+	  @Parameters({"s"})
 	  @Test(dependsOnMethods="login")
-	  public void menu() 
+	  public void menu(String s) 
 	  {
-		  WebElement menuButton = browser.findElement(By.xpath("//span[contains(text(),'½è¿îµÇ¼Ç')]"));
+		  
+		  WebElement menuButton = browser.findElement(By.xpath("//span[contains(text(),'"+s+"')]"));
+		  System.out.println(menuButton.getText());
 		  jsClick(menuButton);
 		  //JavascriptExecutor js1 = (JavascriptExecutor) browser;
 	      //js1.executeScript("arguments[0].click();", menuButton);
@@ -148,7 +151,7 @@ public class Register {
 		  try
 		  {
 			  Thread.sleep(5000);
-			  WebElement employField1 = browser.findElement(By.xpath("//a[contains(text(),'²âÊÔÐ¤Áù:XS006')]"));
+			  WebElement employField1 = browser.findElement(By.xpath("//a[contains(text(),'"+employee+"')]"));
 			  employField1.click();
 			  Thread.sleep(5000);	   
 			  

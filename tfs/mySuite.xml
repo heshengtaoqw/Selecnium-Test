@@ -3,11 +3,11 @@
 
 <suite name="Default suite" parallel="false" thread-count = "1">
 
-  <test name="Register" enabled = "false">
+  <test name="Register" enabled = "false" >
       <parameter name="loginName" value="XS002"/> 
       <parameter name="loginPassword" value="a123456"/>
-      <parameter name="customerName" value="林华"/>
-      <parameter name="customerID" value="512501197506045175"/>
+      <parameter name="customerName" value="林朝玉"/>
+      <parameter name="customerID" value="512501196512305186"/>
       <parameter name="account" value="7"/>
       <parameter name="applyPurpose" value="旅游"/>
       <parameter name="product" value="薪易贷"/>
@@ -15,7 +15,25 @@
       <parameter name="urgentTpye" value="true"/>
       <parameter name="employee" value="测试肖六:XS006"/>
       <parameter name="urgentReason" value="this is a test case from Eclipse"/>
-         
+  	  <parameter name="s" value="借款登记"/>
+          
+      <classes>
+		<class name="tfs_package.Register" />
+      </classes>
+  </test>  
+  
+  <!-- ************************************************************************************************************************************************************************* -->
+  
+  <test name="ApplicationAssign" enabled = "false" >
+      <parameter name="loginName" value="XS001"/> 
+      <parameter name="loginPassword" value="a123456"/>
+      <parameter name="salesmanName" value="测试肖六:XS006"/> 
+      <parameter name="groupLeaderName" value="测试肖二:XS002"/> 
+      <parameter name="serverName" value="测试肖四:XS004"/> 
+      <parameter name="s" value="借款分配"/>
+      <parameter name="customerName" value="林朝玉"/>
+      <parameter name="customerID" value="512501196512305186"/> 
+      
       <classes>
 		<class name="tfs_package.ApplicationAssign" />
       </classes>
@@ -23,15 +41,36 @@
   
   <!-- ************************************************************************************************************************************************************************* -->
   
-  <test name="ApplicationAssign">
-      <parameter name="loginName" value="XS001"/> 
+    <test name="CustomerInformation" >
+      <parameter name="loginName" value="XS004"/> 
       <parameter name="loginPassword" value="a123456"/>
-         
+      <parameter name="salesmanName" value="测试肖六:XS006"/> 
+      <parameter name="groupLeaderName" value="测试肖二:XS002"/> 
+      <parameter name="serverName" value="测试肖四:XS004"/> 
+      <parameter name="s" value="借款录入"/>
+      <parameter name="customerName" value="林朝玉"/>
+      <parameter name="customerID" value="512501196512305186"/>
+      <parameter name="customerSources" value="电销"/> <parameter name="phones" value="13923558866"/> <parameter name="educations" value="本科"/>
+      <parameter name="marriages" value="已婚"/> <parameter name="provinces" value="香港"/> <parameter name="cities" value="香港特区"/>
+      <parameter name="dists" value="新界"/> <parameter name="streets" value="新界三村11栋"/> <parameter name="houseTypes" value="无按揭房"/>
+      <parameter name="coporationNames" value="自动测试公司"/> <parameter name="coporationDepartments" value="软件测试部"/> <parameter name="coporationPositions" value="测试工程师"/>
+      <parameter name="baseSalaries" value="3000"/> <parameter name="sumSalaries" value="5000"/> <parameter name="salaryDays" value="5"/>
+      <parameter name="years" value="2008"/> <parameter name="months" value="11"/> <parameter name="tel1s" value="8845"/>
+      <parameter name="tel2s" value="4115568"/> <parameter name="tel3s" value="7752"/> <parameter name="coporationTypes" value="事业单位"/>
+      <parameter name="jobTypes" value="正式职工"/> <parameter name="job_industries" value="金融"/> <parameter name="privateCompanys" value="否"/>
+      <parameter name="province2s" value="香港"/> <parameter name="city2s" value="香港特区"/> <parameter name="dist2s" value="新界"/>
+      <parameter name="street2s" value="新界大厦11号"/> <parameter name="mateNames" value="王怡"/> <parameter name="matePhoneNums" value="13699885546"/>
+      <parameter name="familyNames" value="许倩"/> <parameter name="familyPhoneNums" value="13875416254"/> <parameter name="friendNames" value="张望"/>
+      <parameter name="friendPhoneNums" value="13875416254"/> <parameter name="workmateNames" value="陈驰"/> <parameter name="workmatePhoneNums" value="13545875452"/>
+      
+      
       <classes>
-		<class name="tfs_package.ApplicationAssign" />
+		<class name="tfs_package.CustomerInformation" />
       </classes>
   </test>  
   
+  <!-- ************************************************************************************************************************************************************************* -->
+    
   
 </suite> <!-- Default suite -->
 
