@@ -22,7 +22,6 @@ public class CustomerInformation  {
 	  
 	  ApplicationAssign a = new ApplicationAssign();
 	  
-	  
 	  @Parameters({"loginName","loginPassword"})
 	  @Test
 	  public void login(String loginName, String loginPassword)
@@ -36,10 +35,18 @@ public class CustomerInformation  {
 	  {
 		  a.menu(s);
 	  }
+	    
+	  @Parameters({"s"})
+	  @Test(dependsOnMethods="fillInInformation")
+	  public void menu2(String s) 
+	  {
+		  a.menu(s);
+	  }
 	  
 	  @Parameters({"salesmanName","groupLeaderName","customerName","customerID"})
 	  @Test(dependsOnMethods = "menu")
-	  public void filter(String salesmanName, String groupLeaderName, String customerName, String customerID)
+	  public void filter4BaseInformation(String salesmanName, String groupLeaderName, String customerName, String customerID)
+
 	  {
 		  try
 		  {
@@ -51,13 +58,28 @@ public class CustomerInformation  {
 		  catch(Exception e){e.printStackTrace();}
 	  }
 
+	  @Parameters({"salesmanName","groupLeaderName","customerName","customerID"})
+	  @Test(dependsOnMethods = "menu2")
+	  public void filter4Image(String salesmanName, String groupLeaderName, String customerName, String customerID)
+	  {
+		  try
+		  {
+			  a.filter(salesmanName, groupLeaderName, customerName, customerID);
+			  Thread.sleep(5000);
+			  WebElement InformationButton = a.r.browser.findElement(By.xpath("//a[contains(text(),'完善资料')]"));
+			  a.r.jsClick(InformationButton);
+		  }
+		  catch(Exception e){e.printStackTrace();}
+	  }
+	  
 	  @Parameters({"customerSources","phones","educations","marriages","provinces","cities","dists","streets","houseTypes",
 		  			"coporationNames", "coporationDepartments", "coporationPositions", "baseSalaries", "sumSalaries", "salaryDays", "years", "months",
 		  			"tel1s", "tel2s", "tel3s", "coporationTypes", "jobTypes", "job_industries", "privateCompanys", "province2s", "city2s", "dist2s", "street2s",
 		  			"mateNames", "matePhoneNums", "familyNames", "familyPhoneNums", "friendNames", "friendPhoneNums", "workmateNames", "workmatePhoneNums"
 	  				})
-	  @Test(dependsOnMethods = "filter")
-	  public void FillInInformation(String customerSources, String phones, String educations, String marriages, String provinces, String cities, String dists, String streets, String houseTypes,
+	  @Test(dependsOnMethods = "filter4BaseInformation")
+	  public void fillInInformation(String customerSources, String phones, String educations, String marriages, String provinces, String cities, String dists, String streets, String houseTypes,
+
 			  						String coporationNames, String coporationDepartments, String coporationPositions, String baseSalaries, String sumSalaries, String salaryDays, String years, String months,
 			  						String tel1s, String tel2s, String tel3s, String coporationTypes, String jobTypes, String job_industries, String privateCompanys, String province2s, String city2s, String dist2s, String street2s,
 			  						String mateNames, String matePhoneNums, String familyNames, String familyPhoneNums, String friendNames, String friendPhoneNums, String workmateNames, String workmatePhoneNums  )
@@ -206,11 +228,52 @@ public class CustomerInformation  {
 		     {e.printStackTrace();}	     
 			 
 	  }
-	
+
+	  @Test(dependsOnMethods = "filter4Image")
+	  public void uploadImage()
+	  {
+		  try
+		  {
+			  Thread.sleep(2000);
+			  WebElement imageMenuButton = a.r.browser.findElement(By.xpath("//a[@href='#tab_FileUpLoad']"));
+			  WebElement uploadButton = a.r.browser.findElement(By.id("fileHuploadifybtn"));
+			  WebElement selectFile = a.r.browser.findElement(By.id("select_btn_1"));
+			  WebElement saveUpload = a.r.browser.findElement(By.id("filesaveUpload"));
+			  WebElement imageConfirm = a.r.browser.findElement(By.id("CheckAllRules"));
+			  
+			  JavascriptExecutor jsupload = (JavascriptExecutor)a.r.browser;
+			  jsupload.executeScript("document.getElementById('select_btn_1').style.display='block';");
+			  a.r.jsClick(imageMenuButton);
+			  a.r.jsClick(uploadButton);
+			  System.out.println("sssss");
+
+			  Thread.sleep(2000);
+			  selectFile.sendKeys("C:\\Users\\A7610\\Desktop\\贷后资料\\影响资料\\A001.pdf");
+			  Thread.sleep(2000);
+			  selectFile.sendKeys("C:\\Users\\A7610\\Desktop\\贷后资料\\影响资料\\A002.pdf");
+			  Thread.sleep(2000);
+			  selectFile.sendKeys("C:\\Users\\A7610\\Desktop\\贷后资料\\影响资料\\A003.pdf");
+			  Thread.sleep(2000);
+			  selectFile.sendKeys("C:\\Users\\A7610\\Desktop\\贷后资料\\影响资料\\A005.pdf");
+			  Thread.sleep(2000);
+			  selectFile.sendKeys("C:\\Users\\A7610\\Desktop\\贷后资料\\影响资料\\A006.pdf");
+			  Thread.sleep(2000);
+			  selectFile.sendKeys("C:\\Users\\A7610\\Desktop\\贷后资料\\影响资料\\A007.pdf");
+
+			  saveUpload.click();
+			  Thread.sleep(20000);
+			  a.r.browser.switchTo().alert().accept();			  
+			  
+			  a.r.jsClick(imageConfirm);
+			  System.out.println("stop");
+		  }
+		  catch(Exception e){e.printStackTrace();}
+
+	  }
+	  
 	  @AfterMethod
 	  public void afterMethod() throws Exception{
 		  a.afterMethod();
-		
 	  }
 	
 	  @AfterTest

@@ -41,7 +41,7 @@
   
   <!-- ************************************************************************************************************************************************************************* -->
   
-    <test name="CustomerInformation" >
+    <test name="CustomerInformation" enabled = "false" >
       <parameter name="loginName" value="XS004"/> 
       <parameter name="loginPassword" value="a123456"/>
       <parameter name="salesmanName" value="测试肖六:XS006"/> 
@@ -68,9 +68,41 @@
 		<class name="tfs_package.CustomerInformation" />
       </classes>
   </test>  
+    <!-- ************************************************************************************************************************************************************************* -->
+    
+    
+     <test name="InformationCheckIn" preserve-order="true" enabled = "false" >
+	      <parameter name="loginName" value="XS004"/> 
+	      <parameter name="loginPassword" value="a123456"/>
+	      <parameter name="salesmanName" value="测试肖六:XS006"/> 
+	      <parameter name="groupLeaderName" value="测试肖二:XS002"/> 
+	      <parameter name="serverName" value="测试肖四:XS004"/> 
+	      <parameter name="s" value="借款录入"/>
+	      <parameter name="customerName" value="林朝玉"/>
+	      <parameter name="customerID" value="512501196512305186"/> 
+	      
+	      <classes>
+			<class name="tfs_package.InformationCheckIn" />
+	      </classes>
+ 	 </test>  
   
   <!-- ************************************************************************************************************************************************************************* -->
     
+         <test name="QualityAssurance" preserve-order="true" >
+	      <parameter name="loginName" value="XS005"/> 
+	      <parameter name="loginPassword" value="a123456"/>
+	      <parameter name="salesmanName" value="测试肖六:XS006"/> 
+	      <parameter name="groupLeaderName" value="测试肖二:XS002"/> 
+	      <parameter name="serverName" value="测试肖四:XS004"/> 
+	      <parameter name="s" value="借款质检"/>
+	      <parameter name="customerName" value="林朝玉"/>
+	      <parameter name="customerID" value="512501196512305186"/> 
+	      
+	      <classes>
+			<class name="tfs_package.QualityAssurance" />
+	      </classes>
+ 	 </test>  
+ 	 
   
 </suite> <!-- Default suite -->
 
