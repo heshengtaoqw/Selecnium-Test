@@ -1,34 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [Default suite]">
-  <parameter name="customerName" value="林朝玉"/>
-  <parameter name="s" value="借款质检"/>
-  <parameter name="groupLeaderName" value="测试肖二:XS002"/>
-  <parameter name="salesmanName" value="测试肖六:XS006"/>
-  <parameter name="serverName" value="测试肖四:XS004"/>
-  <parameter name="customerID" value="512501196512305186"/>
-  <parameter name="loginPassword" value="a123456"/>
-  <parameter name="loginName" value="XS005"/>
-  <test name="QualityAssurance(failed)">
-    <parameter name="customerName" value="林朝玉"/>
-    <parameter name="s" value="借款质检"/>
-    <parameter name="groupLeaderName" value="测试肖二:XS002"/>
-    <parameter name="salesmanName" value="测试肖六:XS006"/>
-    <parameter name="customerID" value="512501196512305186"/>
-    <parameter name="serverName" value="测试肖四:XS004"/>
-    <parameter name="loginPassword" value="a123456"/>
-    <parameter name="loginName" value="XS005"/>
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="tfs_package.QualityAssurance">
+      <class name="tfs_package.Data_ByExcel">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="login"/>
-          <include name="afterClass"/>
-          <include name="filter4Quality"/>
-          <include name="doQuality"/>
-          <include name="menu"/>
+          <include name="f" invocation-numbers="1 2"/>
         </methods>
-      </class> <!-- tfs_package.QualityAssurance -->
+      </class> <!-- tfs_package.Data_ByExcel -->
     </classes>
-  </test> <!-- QualityAssurance(failed) -->
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,90 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43065" started-at="2016-10-09T07:14:15Z" finished-at="2016-10-09T07:14:58Z">
+  <suite name="Default suite" duration-ms="4993" started-at="2016-10-11T09:36:31Z" finished-at="2016-10-11T09:36:36Z">
     <groups>
     </groups>
-    <test name="QualityAssurance" duration-ms="43065" started-at="2016-10-09T07:14:15Z" finished-at="2016-10-09T07:14:58Z">
-      <class name="tfs_package.QualityAssurance">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tfs_package.QualityAssurance@fd4978]" name="beforeMethod" is-config="true" duration-ms="28" started-at="2016-10-09T15:14:15Z" finished-at="2016-10-09T15:14:15Z">
+    <test name="Default test" duration-ms="4993" started-at="2016-10-11T09:36:31Z" finished-at="2016-10-11T09:36:36Z">
+      <class name="tfs_package.Test_Page_Object">
+        <test-method status="PASS" signature="f()[pri:0, instance:tfs_package.Test_Page_Object@de45aa]" name="f" duration-ms="4983" started-at="2016-10-11T17:36:31Z" finished-at="2016-10-11T17:36:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="login(java.lang.String, java.lang.String)[pri:0, instance:tfs_package.QualityAssurance@fd4978]" name="login" duration-ms="4217" started-at="2016-10-09T15:14:15Z" finished-at="2016-10-09T15:14:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[XS005]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[a123456]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tfs_package.QualityAssurance@fd4978]" name="beforeMethod" is-config="true" duration-ms="8" started-at="2016-10-09T15:14:19Z" finished-at="2016-10-09T15:14:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="menu(java.lang.String)[pri:0, instance:tfs_package.QualityAssurance@fd4978]" name="menu" duration-ms="36" started-at="2016-10-09T15:14:19Z" depends-on-methods="tfs_package.QualityAssurance.login" finished-at="2016-10-09T15:14:19Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[½è¿îÖÊ¼ì]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- menu -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tfs_package.QualityAssurance@fd4978]" name="beforeMethod" is-config="true" duration-ms="334" started-at="2016-10-09T15:14:19Z" finished-at="2016-10-09T15:14:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="filter4Quality(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tfs_package.QualityAssurance@fd4978]" name="filter4Quality" duration-ms="25060" started-at="2016-10-09T15:14:20Z" depends-on-methods="tfs_package.QualityAssurance.menu" finished-at="2016-10-09T15:14:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[²âÊÔÐ¤Áù:XS006]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[²âÊÔÐ¤¶þ:XS002]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[ÁÖ³¯Óñ]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[512501196512305186]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- filter4Quality -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tfs_package.QualityAssurance@fd4978]" name="beforeMethod" is-config="true" duration-ms="2130" started-at="2016-10-09T15:14:45Z" finished-at="2016-10-09T15:14:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="doQuality()[pri:0, instance:tfs_package.QualityAssurance@fd4978]" name="doQuality" duration-ms="11239" started-at="2016-10-09T15:14:47Z" depends-on-methods="tfs_package.QualityAssurance.filter4Quality" finished-at="2016-10-09T15:14:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doQuality -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tfs_package.QualityAssurance@fd4978]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-10-09T15:14:58Z" finished-at="2016-10-09T15:14:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- tfs_package.QualityAssurance -->
-    </test> <!-- QualityAssurance -->
+        </test-method> <!-- f -->
+      </class> <!-- tfs_package.Test_Page_Object -->
+    </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
