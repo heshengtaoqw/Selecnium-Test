@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Default suite" parallel="false" thread-count = "1">
+
+  <test name="register" >
+      <parameter name="loginName" value="XS002"/> 
+      <parameter name="loginPassword" value="a123456"/>
+      <parameter name="loginURL" value="http://172.16.201.28:8080/security-server/login/show.htm"/>
+      <parameter name="homeURL" value = "http://www.beforeloan.tfs.com/TFS.PreLoan.Web/Report/CreditSumReportIndex"/>
+          
+      <classes>
+		<class name="tfs_test_login.Register"/>
+      </classes>
+  </test>  
+  
+  <!-- ************************************************************************************************************************************************************************* -->
+  
+</suite> <!-- Default suite -->
+
